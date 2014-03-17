@@ -1,4 +1,4 @@
-#Google Developer Group (GDG) Assets
+#Google Developer Group (GDG) Hangar
 
 This repo will serve as a host for GDG assests shared by the community.
 
