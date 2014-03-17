@@ -9,3 +9,8 @@ I am a programmer, not a word merger.  This burned way more time than I thought 
 - After word merge, don't forget to visually check each page.  Some names are longer than the size allowed. In that case bump down the font.
 - Kinkos said that it would have been helpful to have registration marks on the sheets to line up the cutter, but they did great anyhow.
 - _NOTE:_ The resultant stack is not alphabetical from top to bottom.  If you can think of a wordmerge sort that is 3 dimensional like it would need to be post it!
+
+**BACK** - We chose to print our sponor logos on the back, Which made double sided printing easy to line up.  If you were to have the copy shop print the same back as on the front, you would have to creatively sort the names so they matched front to back.
+
+
+####Print extras blanks!
