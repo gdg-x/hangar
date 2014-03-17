@@ -12,3 +12,7 @@ Fork this repo, add your assets, and submit a pull request :)
 
 ###Guidelines
 (None, yet. We will build best practices and address issues as they come up)
+
+
+###Other Resources
+GDG Logo Generator - http://gdg-generator.appspot.com/
