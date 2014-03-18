@@ -8,8 +8,8 @@ If you would like to share something here, make sure you want it to fall under t
 http://creativecommons.org/licenses/by-sa/3.0/
 
 
-###How do I share my assets?
-Fork this repo, add your assets, and submit a pull request :)
+###What kind of assets should I share on this directory?
+On this directory, share videos about the GDG & GDG[x] initiatives. Please, do not share videos about technologies.
 
 
 ###Guidelines
