@@ -1,3 +1,5 @@
+![GDG[x] Hangar](https://raw.github.com/gdg-x/hangar/master/images/logos/gdg-x/gdg-x-hangar_small.png)
+
 #Google Developer Group (GDG) Hangar
 
 This repo will serve as a host for GDG assests shared by the community.
