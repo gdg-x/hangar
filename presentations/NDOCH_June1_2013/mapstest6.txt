@@ -1,0 +1,66 @@
+	// Async Task to gather and populate the spots...
+	// Important to do this task Async as no Networking should be done on main thread
+	private class spotsRequestTask extends AsyncTask<String, Void, String> {
+	    @Override
+	    protected String doInBackground(String... urls) {
+	        //String response = "";
+	        parser = new ParkParseCSV();
+    		markerOptsList = new ArrayList<MarkerOptions>();
+	        boolean resultError = false;
+	        for (String url : urls) {
+	        	// grab the URL for the dog parks and parse it...
+	        	try {
+					parks = parser.parseFromUrl(new URL(url));
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					resultError = true;
+					e.printStackTrace();
+				}
+	        	// loop and add...
+	        	if(!resultError) {
+	        		try {
+		        		for (int i = 0; i < parks.size(); i++) {
+		        		    //create a new object
+		        		    MarkerOptions markerOptions = new MarkerOptions();
+	
+		        		    //get lat and lng
+		        		    double lat = ((DogPark)parks.get(i)).get_ll()[0];
+		        		    double lng = ((DogPark)parks.get(i)).get_ll()[1];
+	
+		        		    //set fields
+		        		    markerOptions.title(((DogPark)parks.get(i)).get_name());
+		        		    markerOptions.snippet(((DogPark)parks.get(i)).toString());
+		        		    markerOptions.position(new LatLng(lat, lng));
+	
+		        		    //add markerOptions object to list
+		        		    markerOptsList.add(markerOptions);
+		        		}
+	        		} catch (Exception ex) {
+	        			resultError = true;
+	        		}
+	        	}
+	        }
+        	if(resultError) {
+        		return "false";
+        	} else { return "true"; }
+	    }
+
+	    @Override
+	    protected void onPostExecute(String result) {
+	        System.out.println(result);
+	        if(result.equals("true")) {
+	        	// populate our points on our map
+	        	// http://www.cabq.gov/parksandrecreation/documents/Dog%20Park%20Map%20Plone.csv
+        		for (int i = 0; i < markerOptsList.size(); i++) {
+        		    mMap.addMarker(markerOptsList.get(i));
+        		}
+        		try {
+        			// center our camera on our location...
+        			mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+        			mMap.animateCamera(CameraUpdateFactory.zoomTo(Integer.parseInt("11"))); // 15 = street view
+        		} catch (Exception ex) {
+        			ex.printStackTrace();
+        		}
+	        }
+	    }
+	}

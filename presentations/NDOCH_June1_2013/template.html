@@ -1,0 +1,999 @@
+﻿<!--
+Google IO 2012/2013 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahé <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  <slide>
+    <article class="flexbox vcenter">
+<center><img src="images/google_developers_logo.png"><br>
+<img src="images/GDG_ABQ_Banner.png"></center>
+    </article>
+  </slide>
+
+  <slide class="title-slide segue nobackground">
+    <aside class="gdbar"><img src="images/gdg_badge4.png" style="-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;"></aside>
+    <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <b>Enjoying Google I/O 2013 - Header on Google Developer Groups<br>&nbsp;&nbsp;&nbsp; http://goo.gl/nsjkj - Google #autoawesome engaged...</b>
+    </hgroup>
+<article>
+<center><img src="images/gdg_abq_io_13.gif" height="90%" width="90%" style="-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;"></center>
+</article>
+</slide>
+
+
+ <slide>
+    <hgroup>
+      <h2>Introductions</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li><b>Dustin D. Brand</b>
+          <ul>
+            <li>Founder GDG Albuquerque</li>
+          </ul>
+	</li>
+        <li><b>Nick Bachicha</b>
+          <ul>
+            <li>Hacker for Movies</li>
+          </ul>
+        </li>
+        <li><b>Javier Chavez</b>
+          <ul>
+            <li>Android afficiando and student at UNM</li>
+          </ul>
+	</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Setting up your Android Development Environment & Requirements</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Android uses the <b>Java Programming Language</b>
+          <ul>
+            <li>we have the required SDK available for install</li>
+	<li>you <b>will</b> need programming experience in Java and a laptop to be effective in these code labs</li>
+          </ul>
+	</li>
+        <li><b>Eclipse</b>
+          <ul>
+            <li>for Windows, Mac, Linux</li>
+          </ul>
+	</li>
+        <li>or <b>IntelliJ</b>
+          <ul>
+            <li>for Windows, Mac, Linux</li>
+          </ul>
+        </li>
+        <li>or Google's <b>NEW Android Studio</b> based on IntelliJ
+          <ul>
+            <li>in Alpha, for Windows, Mac, Linux</li>
+          </ul>
+	</li>
+        <li>If you do not have your environment setup, we will help you and have these ready to install.  For brevity, we will focus on using <b>Eclipse</b>.</li>
+      </ul>
+    </article>
+  </slide>
+
+<slide>
+    <hgroup>
+      <h2>Questions?  We'll have time for them.</h2>
+    </hgroup>
+    <article class="smaller"><br>
+      <center><img src="images/gdg_questions.png" class="reflect" alt="Description" title="Description"></center>
+</article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>The Basics to today's sessions:</h2>
+      <h3>Startup Weekend Bootcamp and Google Code Labs explained</h3>
+    </hgroup>
+    <article>
+      <p>Our program has been designed to be a place where things are built:</p>
+      <ul class="build">
+        <li>Today's Code Labs & Bootcamp are all about coding and learning</li>
+        <li>You'll have help from your peers and pros alike</li>
+        <li>You'll have time to focus on YOUR idea no matter how small or large</li>
+        <li>Today provides you an opportunity to Network with other like-minded people</li>
+        <li>You'll Code on your own or in a group towards a goal</li>
+        <li>Getting a boost on your development for Startup Weekend</li>
+	<li>You'll learn a new Google API or technology you may implement</li>
+      </ul>
+      <p>Remember, no question is stupid!</p>
+      <ul class="build fade">
+        <li>If you need any help, just ask</li>
+        <li>HAVE FUN!</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Setup the WiFi Network we will be using</h2>
+    </hgroup><br><br><br><br><br>
+    <article>
+      <ul>
+        <li><b>SSID:</b> DaneSmithHall</li>
+        <li><b>PWD:</b> hackforchange</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide hidden>
+    Hidden slides are left out of the presentation.
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Your basic Android Activity</h2>
+      <h3>Absolute minimum needed for an Activity</h3>
+      <h3>Android activities are your screens</h3>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="java">
+public class MainActivity extends Activity {
+   /** Called when the activity is first created. */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+<b>	setContentView(R.layout.activity_main);</b>
+    }
+}
+</pre>
+  <ul>
+        <li><b>extends</b> tells Android we are extending a class of Type Activity</li>
+        <li>You may also use <b>implements</b> like <b>OnClickListener</b> - implements tell Android to implement an action, like the mentioned listener inside your activity</li>
+      </ul>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Your basic Android Layout</h2>
+      <h3>Android layouts control how your Activity screen looks</h3>
+      <h3>Below is a very basic XML with a textbox</h3>
+    </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint" data-lang="xml">
+&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+   &lt;TextView
+        android:id="@+id/localText"
+        android:layout_width="match_parent"
+        android:layout_height="21dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+         />
+&lt;/LinearLayout>
+</pre>
+  <ul>
+        <li><b>Pro-TIP:</b>  You may use multiple layouts for a single screen based on device resolution and whether it is currently in portrait or landscape</li>
+        <li>Please see the samples for more advanced XML layouts</li>
+      </ul>
+    </article>
+  </slide>
+
+
+ <slide>
+    <hgroup>
+      <h2>Android Activity Lifecycle</h2>
+    </hgroup>
+    <article>
+      <center><img src="images/gdg_android_lifecycle2.png" class="reflect" alt="Description" title="Description"></center>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Activity with onResume, onPause and onDestroy</h2>
+    </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint" data-lang="java">
+// called when the activity is drawn or redrawn...
+	@Override
+	public void onResume() {
+		super.onResume();
+		// check for updates to SharedPreferences, resume GPS etc...
+	}
+// called when the activity is no longer fully visible - stop GPS, etc.
+	@Override
+	public void onPause() {
+		super.onPause();
+	}
+// called when the activity is being closed, set objects to null
+	@Override
+	public void onDestroy(){
+		super.onDestroy();
+		if(objecta != null) objecta = null;
+		// release handle to GPS, msg handlers, etc.
+	}
+</pre>
+  <ul>
+        <li><b>@Override</b>'s are used on any system wide methods when implemented</li>
+        <li>Example overrides are onCreate, onClick, onCreateOptionsMenu, onOptionsItemSelected, onPause, onStop, onResume, onDestroy etc...</li>
+      </ul>
+
+    </article>
+  </slide>
+
+ <slide>
+    <hgroup>
+      <h2>The all important try-catch-Exception Block</h2>
+      <h3>Wrapping your code to handle Errors</h3>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="java">
+	try {
+	     enc = flipperCrypto.encrypt(ti, Constants.remoteSeed);
+	} catch (Exception e) {
+	     // TODO Auto-generated catch block
+	     e.printStackTrace();
+	}
+</pre>
+  <ul>
+        <li><b>Pro-TIP:</b>  The <b>NullPointerException</b> is the #1 error in Android development - be sure to wrap any code where an object may be null in a try-catch and make sure your objects/variables are instantiated FIRST</li>
+        <li><b>Pro-TIP:</b> To catch an OutOfMemoryError use catch (OutOfMemoryError e) as it is not an exception but rather a System error - this should be used in ALL bitmap operations</li>
+      </ul>
+    </article>
+  </slide>
+
+<slide>
+    <hgroup>
+      <h2>One last <b>Pro-TIP</b></h2>
+      <h3>Leveraging System.out.println(""); - It's useful in and out of try-catch blocks</h3>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="java">
+	String enc = "";
+	try {
+	     enc = flipperCrypto.encrypt(ti, Constants.remoteSeed);
+	     System.out.println("enc is: " + enc + " ti is: " + ti);
+	} catch (Exception e) {
+	     System.out.println("enc is: " + enc + " ti is: " + ti);
+	     e.printStackTrace();
+	}
+</pre>
+  <ul>
+        <li>By leveraging the built in System.out.println("") - you may debug your application in real-time on a real device while watching output in logcat</li>
+	<li>Place these anywhere you want output from your application for ease of development and debugging</li>
+      </ul>
+    </article>
+  </slide>
+
+<slide>
+    <hgroup>
+      <h2>Example Android logcat output</h2>
+    </hgroup>
+    <article>
+      <img src="images/abq_wifi_logcat.png" class="reflect" alt="Description" title="Description">
+      <br><footer class="source black"><b>Search ABQ WiFi on the Google Play Store</b></footer>
+    </article>
+</slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Time to play with some Samples!</h2><br>
+	<h1>You may start with any of the following samples:</h1>
+    </hgroup>
+    <article>
+      <ul>
+        <li>YouTube API v3 Samples
+          <ul>
+            <li>Learn about the ActionBar</li>
+	    <li>Learn about Intents</li>
+	    <li>Learn about Fragments (advanced)</li>
+	    <li>Learn about the YouTube Player</li>
+          </ul>
+	</li>
+        <li>SpellChecker (moderate)</li>
+        <li>Voice Recognition Service (advanced)</li>
+        <li>Weather List Widget</li>
+	<li>Or any other samples we provided</li>
+      </ul>We will be covering Google Maps and civic data later today.<br>
+<b>Please take time to ADD TO the samples.  Be creative!</b>
+    </article>
+  </slide>
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/gdg_badge4.png" style="-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Intermission</h2>
+      <h3>Coming up next - Google Maps & Civic Data</h3>
+      <h3>Later - Google+ Single Sign On & OPEN Code Labs Playground</h3>
+    </hgroup>
+  </slide>
+
+
+  <slide class="hidden">
+    <aside class="note">
+      <section>
+        <ul>
+          <li>Point I wanted to make #1</li>
+          <li>Point I wanted to make #2</li>
+          <li>Point I wanted to make #3</li>
+          <li>Example <a href="#">link</a> in notes.</li>
+        </ul>
+        <p><b>Remember to say this tag line!</b></p>
+      </section>
+    </aside>
+    <hgroup>
+      <h2>Slide with Speaker Notes</h2>
+    </hgroup>
+    <article>
+      <p>Press 'p' to toggle speaker notes.</p>
+    </article>
+  </slide>
+
+  <slide class="hidden">
+    <aside class="note">
+      <section>
+        <ul>
+          <li>See this amazing link: <a href="http://www.google.com">link</a>.</li>
+        </ul>
+        <p><b>Remember to say this tag line!</b></p>
+      </section>
+    </aside>
+    <hgroup>
+      <h2>Presenter Mode</h2>
+    </hgroup>
+    <article>
+      <p>Add <code><a href="?presentme=true" target="_self">?presentme=true</a></code> to the URL to enabled presenter mode.
+      This setting is sticky, meaning refreshing the page will persist presenter
+      mode.</p>
+      <p>Hit <code><a href="?presentme=false" target="_self">?presentme=false</a></code> to disable presenter mode.</p>
+    </article>
+  </slide>
+
+<slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/gdg_badge4.png" style="-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;"></aside>
+    <hgroup class="auto-fadein">
+      <h2>NEXT: Google Maps API</h2>
+      <h3>Covering Android and HTML5 versions</h3>
+    </hgroup>
+  </slide>
+
+<slide>
+<hgroup>
+<h2>Setting up the Google Maps API under Android</h2>
+<h3>This will need to be completed before you may continue</h3></hgroup>
+<article><b>OPTION 1 for full Android integration</b><br>
+<b>STEP 1</b>
+Locate the google-play-services_lib folder you were provided and import it into your workspace as a <b>LIBRARY</b> project from the <b>SAME DRIVE</b> as your SDK.  Also located in androidsdk/extras.<br>
+      <section>
+        <ul>
+          <li>Under <b>Eclipse</b> go to import - Android - Exisiting, and import as a library project.  Clean the project and Build.</li>
+        </ul>
+        <p><b>We're here to help!</b></p>
+      </section>
+<b>OPTION 2 for HTML5 only</b><br>
+You don't want full Android API integration - you will use the Google Maps v2 Static Web API.<br>
+      <section>
+        <ul>
+          <li>You are ready to proceed if you choose this option but will be limited in what you may do.</li>
+        </ul>
+        <p><b>We're here to help!</b></p>
+      </section>
+</article>
+</slide>
+
+<slide>
+    <hgroup>
+      <h2>OPTION 1 and 2 Android project setup</h2>
+      <h3>STEP 2: Setup a blank Android project</h3>
+    </hgroup>
+    <article>
+<h2>From your Eclipse Android IDE:</h2><br>
+      <section>
+        <ul>
+          <li>File - New - Project - Android Application Project</li>
+	  <li>Name the Project MapsTest</li>
+	  <li>Name the package com.maps.mapstest</li>
+	  <li>Minimum SDK 8, Target SDK 17, Compile SDK 17 - Next</li>
+	  <li>Make sure create activity and create project are checked</li>
+	  <li>Click Next until you may click Finish</li>
+        </ul>
+	</section>
+Let us know when you've completed this step or if you need any help.
+    </article>
+  </slide>
+<slide>
+    <hgroup>
+      <h2>OPTION 1 and 2 Android project setup</h2>
+      <h3>STEP 3: Modify your Android manifest - Download: <b>goo.gl/aqqn4</b></h3>
+    </hgroup>
+    <article class="smaller">
+Add the following to AndroidManifest.xml under uses-sdk
+  <pre class="prettyprint" data-lang="XML">
+&lt;!-- OPTION 1 and 2 (no need to add this text). -->
+&lt;uses-permission android:name="android.permission.INTERNET"/>
+&lt;!-- OPTION 1 only (full Maps API) -->
+&lt;permission android:name="com.maps.mapstest.permission.MAPS_RECEIVE"
+    android:protectionLevel="signature"/>
+&lt;uses-permission android:name="com.maps.mapstest.permission.MAPS_RECEIVE"/>
+&lt;uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+&lt;uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+&lt;uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+&lt;!-- Maps API needs OpenGL ES 2.0. -->
+&lt;uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+</pre>
+<pre class="prettyprint" data-lang="XML">
+&lt;!-- OPTION 1 only (full Maps API) Right under Application tag -->
+&lt;meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="YOUR_OWN_KEY"/>
+</pre>
+Let us know when you've completed this step or if you need any help.
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>OPTION 1 full Android Google Maps API Setup</h2>
+      <h3>STEP 4: Get your SHA1 key first</h3>
+    </hgroup>
+    <article>
+	You must run the following from your Java SDK BIN folder containing "keytool"<br>&nbsp; On Windows: <b>C:\Program Files\Java\jdk1.7.0_xVer\bin</b><br>
+&nbsp; Open a command prompt and type (on Windows - Start Button + r - cmd):<br>
+Navigate to your JAVA SDK bin folder with the keytool and type:<br><br>
+	<b>keytool -list -v -keystore "path to debug keystore"</b><br><br>
+	On Windows the default keystore is generally located in<br><b>X:\Users\username\.android\debug.keystore</b><br><br>
+	Don't forget to use quotes in the keytool command for your path to the keystore.<br><b>IE: -keystore "path to key file"</b><br><br>
+	Upon success you will get an SHA1 key output which you will need to cut and paste.  On Windows you may right click, drag to copy, then click outside.  CTRL-V will bring your copy back in the next step.
+    </article>
+  </slide>
+  <slide>
+    <hgroup>
+      <h2>OPTION 1 and 2 Google Maps API Setup</h2>
+      <h3>STEP 4-5: Setup an API Project @ https://code.google.com/apis/console</h3>
+    </hgroup>
+    <article>
+      <section>
+        <ul>
+          <li>Top left dropdown, Create new Project, name it MapsTest</li>
+	  <li>Once created, turn on the following Services from the Services tab</li>
+	<ul>
+		<li>Google Maps Android API v2</li>
+		<li>Google Maps API v2</li>
+		<li>Google Maps API v3</li>
+		<li>Static Maps API</li>
+	</ul>
+        </ul>
+	</section>
+Let us know when you've completed this step or if you need any help.
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>OPTION 1 full Android Google Maps API Setup</h2>
+      <h3>STEP 6: Setup your API Key @ https://code.google.com/apis/console</h3>
+	Here you will enter your SHA1 from the last step plus a ;com.maps.mapstest<br>
+	From the project you created, go to API Access and select Create new Android Key
+    </hgroup>
+    <article>
+      <center><img src="images/abq_wifi_key.png" class="reflect" alt="Description" title="Description"></center>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>OPTION 1 full Android Google Maps API Setup</h2><br>
+      STEP 7: <b>Attach the play services api as a library by right clicking on your new project and selecting properties then selecting Add Library under Android.</b>
+    </hgroup><br>
+ <article class="smaller">
+Add your API Key you created in the last step to "YOUR_OWN_KEY" in your Android Manifest
+  <pre class="prettyprint" data-lang="XML">
+&lt;!-- OPTION 1 only (full Maps API) Right under Application tag -->
+&lt;meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="YOUR_OWN_KEY"/>
+</pre>
+<br><br>In the next few slides we will show screens using both Map API's in our Albuquerque WiFi project.<br><br>
+You may download <b>ABQ WiFi</b> from the Google Play Store now if you'd like.
+</article>
+  </slide>
+  <slide>
+    <hgroup>
+      <h2>Google Maps API used with Albuquerque WiFi</h2>
+    </hgroup>
+    <article>
+      <img src="images/Screenshot_2013-05-25-00-25-12.png" class="reflect" alt="Description" title="Description">
+      <br><footer class="source black"><b>search ABQ WiFi on the Google Play Store</b></footer>
+    </article>
+  </slide>
+
+ <slide>
+    <hgroup>
+      <h2>Google Maps API used with Albuquerque WiFi</h2>
+Top using Google Maps Static Web API while bottom uses full Android Google Maps API.
+    </hgroup>
+<center>Download ABQ WiFi on the Google Play Store : <b>goo.gl/2Vhfy</b></center>
+    <article><center>
+      <img src="images/Screenshot_2013-05-25-00-25-12.png" class="reflect" width="29%" height="29%" alt="Description" title="Description">
+      <img src="images/Screenshot_2013-05-27-21-29-26.png" class="reflect" width="29%" height="29%" alt="Description" title="Description">
+      <img src="images/Screenshot_2013-05-27-21-29-44.png" class="reflect" width="29%" height="29%" alt="Description" title="Description">
+</center>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>OPTION 1 and 2 - Setup our Layout</h2>
+<br>Open your res/layout/activity_main.xml<br>
+Now empty the layout so it's blank, we're replacing it.  Download: <b>goo.gl/zQDgK</b>
+    </hgroup>
+<article class="smaller">
+  <pre class="prettyprint" data-lang="XML">
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:map="http://schemas.android.com/apk/res-auto"
+  map:mapType="normal"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical">
+ &lt;WebView  
+    android:id="@+id/webview"
+    android:layout_width="fill_parent"
+    android:layout_height="150dp"
+  />
+  &lt;TextView
+    android:id="@+id/localText"
+    android:layout_width="fill_parent"
+    android:layout_height="21dp"
+  />
+&lt;/LinearLayout>
+</pre>
+Let us know when you've completed this step or if you need any help.
+</article>
+</slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>OPTION 1 and 2 - Setup WebView Code</h2>
+    </hgroup><br>
+In your MainActivity.java, add the following above your onCreate and below Main class - please write this code on your own
+  <pre class="prettyprint" data-lang="java">
+private WebView webView;
+</pre>
+<h3>In your MainActivity.java, add the following inside your onCreate</h3>
+<pre class="prettyprint" data-lang="java">
+	webView = (WebView) findViewById(R.id.webview);
+	webView.getSettings().setJavaScriptEnabled(true);
+	webView.getSettings().setBuiltInZoomControls(true);
+	webView.getSettings().setSupportZoom(true);
+</pre>
+Let us know when you've completed this step or if you need any help.
+</slide>
+
+  <slide>
+    <hgroup>
+      <h2>OPTION 1 and 2 - Setup WebView</h2>
+    </hgroup>
+In your MainActivity.java, add the following inside your onCreate under your last webView.getSettings()&nbsp; Download: <b>goo.gl/9Sf3N</b>
+<pre class="prettyprint" data-lang="java">
+webView.setWebViewClient(new WebViewClient() {
+@Override  
+public void onPageFinished(WebView view, String url) {
+    super.onPageFinished(webView, url);
+    Toast.makeText(getApplicationContext(), "Done!\n" + url, Toast.LENGTH_SHORT).show();
+}
+@Override
+public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) 
+{
+    System.out.println(errorCode + " " + description);
+    if(errorCode == -2) { // unable to find, IE: 404 no network
+ 	if (view.canGoBack()) {
+            view.goBack();
+        }
+    }
+}
+});
+</pre>
+</slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>OPTION 1 and 2 - Setup WebView</h2>
+    </hgroup>
+In your MainActivity.java, add the following inside your onCreate under your last webView call - Download: <b>goo.gl/aKYL6</b><br>
+Balloon Museum: Latitude: <b>35.1898093</b> - Longitude: <b>-106.5978931</b>
+<article>
+<pre class="prettyprint" data-lang="java">
+String longitude = ""; // add coordinate here
+String latitude = ""; // add coordinate here
+String height = "150";
+String width = "400";
+// load the static Google Map in our WebView with a width of 400 by 150 height.
+<b>webView.loadUrl("http://maps.google.com/maps/api/staticmap?center=" +
+	latitude + "," + longitude+ "&zoom=15&size=" + width + "x" + height +
+	"&scale=1&sensor=true&markers=color:blue%7Clabel:Y%7C" + 
+	latitude + "," + longitude + "");</b>
+// If you created a key, you may use a &key=yourkey at the end
+// Color of marker is BLUE with a label of Y - zoom lvl 15 = streetview
+</pre>
+</article>
+Compile and run the application.  You should see a map with a marker at our Balloon Museum.  Here is where the limitation of the static maps api is visible - you may only have so many markers in the static api.
+</slide>
+
+  <slide>
+    <hgroup>
+      <h2>OPTION 1 and 2 - Adding GPS Awareness</h2>
+    </hgroup>
+<article>
+<pre class="prettyprint" data-lang="java">
+// In your MainActivity.java, add the following below your main class
+private LocationManager locationManager;
+// Hover over LocationManager to add the necessary import...
+</pre>
+<pre class="prettyprint" data-lang="java">
+// In your MainActivity.java, add the following after your extends Activity 
+// at the top main class
+implements LocationListener
+// Hover over LocationListener to add the necessary import...
+</pre>
+
+<pre class="prettyprint" data-lang="java">
+// add the following in your onCreate near the bottom
+locationManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
+locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 30000, 0, this); 
+// lets get location updates every 30 seconds (30 x 1000 milliseconds)
+</pre>
+</article>
+Now that the application is GPS Aware, we will have location information and may update our static Maps API with our current location.
+</slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>OPTION 1 and 2 - Receiving Location updates</h2>
+Now that our application is location aware, let's setup our implements we need.<br><br>
+At the top of your MainActivity Class, hover over LocationListener and import.<br>Now hover over MainActivity and add unimplemented methods.<br><br>
+Download: <b>goo.gl/ph3Iu</b>
+    </hgroup>
+<article>
+<pre class="prettyprint" data-lang="java">
+// In your MainActivity.java, add the following in your onLocationChanged method
+@Override
+public void onLocationChanged(Location location) {
+	// TODO Auto-generated method stub
+<b>	getLocationLatLng();
+	System.out.println("LocationChanged Called");</b>
+}
+</pre>
+</article>
+</slide>
+
+  <slide>
+    <hgroup>
+      <h2>OPTION 1 and 2 - Receiving Location updates</h2>
+Lets setup our getLocationLatLng() method.<br>
+Download: <b>goo.gl/ENs8l</b>
+    </hgroup>
+<article class="smaller">
+<pre class="prettyprint" data-lang="java">
+// In your MainActivity.java, add the following below your other private variables at the top
+private LatLng latLng; // Hover over LatLng to import
+private double latC = 0;
+private double lonC = 0;
+</pre>
+<pre class="prettyprint" data-lang="java">
+// In your MainActivity.java, add the following inside your main class
+private void getLocationLatLng() {
+    try {
+	if(locationManager != null) {
+	latC = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER).getLatitude();
+	lonC = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER).getLongitude();
+	latLng = new LatLng(latC, lonC); // Hover Over LatLng to import
+	}
+    } catch (Exception ex) {
+	System.out.println("Oops, we had an error: "+ ex.getMessage());
+    }
+}
+</pre>
+Now you are ready to play with your coordinates and place them on your map.<br>
+</article>
+</slide>
+
+
+
+  <slide>
+    <hgroup>
+      <h2>OPTION 1 and 2 - Android Google Maps API</h2>
+    </hgroup>
+<article>
+<br><br><br><br><b>Break.</b><br><br><br>
+Lets make sure you are all setup correctly.<br><br><br><br>
+<b>Coming up next - we will convert your project to fully support the latest Android Google Maps API.</b>
+</article>
+</slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>OPTION 1 and 2 - Android Google Maps API</h2><br><br><br>
+Right click your MapsTest project and select <b>Android Tools</b> then <b>Add Support Library</b>.
+    </hgroup>
+<article>
+Build Project.
+</article>
+</slide>
+
+  <slide>
+    <hgroup>
+      <h2>OPTION 1 and 2 - Android Google Maps API</h2><br><br><br>
+Add a fragment to your activity_main.xml in res/layouts - place under your WebView and TextView elements before your closing LinearLayout.<br><br>
+XML Snippet Download: <b>goo.gl/zlS5p</b>
+    </hgroup>
+<article>
+<pre class="prettyprint" data-lang="XML">
+&lt;fragment android:id="@+id/map"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:name="com.google.android.gms.maps.SupportMapFragment"
+          />
+</pre><br><br><br>Build Project
+</article>
+</slide>
+
+  <slide>
+    <hgroup>
+      <h2>OPTION 1 and 2 - Android Google Maps API</h2><br><br><br>
+In your <b>MainActivity.java</b><br><br>
+Change your Android Activity to a FragmentActivity<br><br>
+&nbsp;&nbsp so... extends Activity changes to extends FragmentActivity<br><br><br>
+Hover Over FragmentActivity to import.
+    </hgroup>
+<article>
+Build Project.
+</article>
+</slide>
+
+  <slide>
+    <hgroup>
+      <h2>OPTION 1 and 2 - Android Google Maps API</h2><br><br><br>
+Setup your GoogleMap
+    </hgroup>
+<article>
+<pre class="prettyprint" data-lang="java">
+// add under your MainActivity class under your other private variables
+public GoogleMap mMap; // Hover over GoogleMap to import
+</pre>
+Add in your onCreate under setContentView
+<pre class="prettyprint" data-lang="java">
+SupportMapFragment fm = (SupportMapFragment) 
+   getSupportFragmentManager().findFragmentById(R.id.map);
+// hover over SupportMapFragment to add import
+// Getting GoogleMap object from the fragment
+mMap = fm.getMap();
+// Enabling MyLocation Layer of Google Map
+mMap.setMyLocationEnabled(true);
+</pre>
+Everyone ready to proceed?
+</article>
+</slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>OPTION 1 and 2 - Android Google Maps API</h2><br>
+Adding a parser for Albuquerque Civic Data in CSV format<br>
+<h2>Albuquerque Dog Parks on a Google Map</h2>
+<b>DataSet:</b> http://www.cabq.gov/parksandrecreation...<br>
+&nbsp; Shortened: <b>goo.gl/WNs3t</b>
+    </hgroup>
+<center><img src="images/husky_dogs_-5398.jpg" height="35%" width="35%" style="-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;"></center>
+<article>
+Download the following JAVA class here:<br>
+<b>goo.gl/Vm1OE</b><br><br>
+Import this Java Class into your source folder with MainActivity.java - change package name to <b>com.maps.mapstest</b><br>
+</article>
+</slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>OPTION 1 and 2 - Android Google Maps API</h2><br><br><br>
+Setup your AsyncTask
+    </hgroup>
+<article class="smaller">
+Add under main class and other variables.  You need to write this code.
+<pre class="prettyprint" data-lang="java">
+	ParkParseCSV parser;
+	List&lt;DogPark> parks;
+	List&lt;MarkerOptions> markerOptsList;
+</pre>
+<pre class="prettyprint" data-lang="java">
+// add to the bottom of your onCreate
+	spotsRequestTask task = new spotsRequestTask();
+	task.execute(new String[] { "http://goo.gl/WNs3t" });
+</pre>
+Download and add the AsyncTask method to MainActivity.java: <b>goo.gl/B2De2</b><br><br>
+Everyone ready to proceed?
+</article>
+</slide>
+
+  <slide>
+    <hgroup>
+      <h2>MapsTest Completed</h2>
+    </hgroup>
+<article>
+<center><img src="images/Screenshot_2013-05-30-12-43-08.png" height="35%" width="35%"></center>
+</article>
+</slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Great Job everyone!</h2>
+      <h3>You should now be able to compile and run MapsTest with Dog Parks</h3>
+<br><br><h3>Won't compile?  Having another issue?  Don't worry, we're here to help.</h3>
+<br><br>You may now download this full sample.  You will need to change the API key to your key that you created earlier.  This sample also includes the new Google Single Sign On example we will discuss later.  Google Single Sign On allows you to leverage Google's own sign in servers to authenticate your users.<br><br>
+Download full MapsTest with Google Single Sign On: <b>goo.gl/Bqm6D</b>
+    </hgroup>
+    <article>
+
+    </article>
+  </slide>
+
+<slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/gdg_badge4.png" style="-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;"></aside>
+    <hgroup class="auto-fadein">
+      <h2>NEXT: Google+ Single Sign On</h2>
+      <h3>Soon - OPEN Code Labs Playground</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Google+ Single Sign On</h2><br><br>
+<center><img src="https://developers.google.com/+/images/branding/sign-in-buttons/Red-signin_Long_base_44dp.png"></center>
+      <b>Allows your application to integrate with Google's own authentication servers.</b><br>
+      <b>Also allows your application to interact with Google+ allowing your users to Share.</b><br><br>
+Please review the following link for your API Console setup<br><br>
+<center><b>goo.gl/4SH4Y</b></center><br><br>
+We will walk around and help with the API Console setup.  It's easy!<br><br>
+If you downloaded the full MapsTest sample you are ready to go play!<br><br>
+<center><b>goo.gl/Bqm6D</b></center><br><br>
+    </hgroup>
+    <article>
+
+    </article>
+  </slide>
+
+<slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/gdg_badge4.png" style="-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;"></aside>
+    <hgroup class="auto-fadein">
+      <h2>NEXT: OPEN Code Labs Playground</h2>
+      <h3>This is the time to work on anything you want</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Time to play with some Samples!</h2><br>
+	<h1>You may start with any of the following samples:</h1>
+    </hgroup>
+    <article>
+      <ul>
+        <li>YouTube API v3 Samples
+          <ul>
+            <li>Learn about the ActionBar</li>
+	    <li>Learn about Intents</li>
+	    <li>Learn about Fragments (advanced)</li>
+	    <li>Learn about the YouTube Player</li>
+          </ul>
+	</li>
+        <li>SpellChecker (moderate)</li>
+        <li>Voice Recognition Service (advanced)</li>
+        <li>Weather List Widget</li>
+	<li><b>Or any other samples or code you desire</b></li>
+      </ul>Have fun!  Split into groups if you'd like.  We're here to help!<br>
+<b>Please take time to ADD TO the samples.  Be creative!</b>
+    </article>
+  </slide>
+
+  <slide class="segue dark nobackground hidden">
+    <aside class="gdbar"><img src="images/gdg_badge4.png" style="-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Segue Slide</h2>
+      <h3>Subtitle Placeholder</h3>
+    </hgroup>
+  </slide>
+
+
+  <slide class="segue dark quote nobackground hidden">
+    <aside class="gdbar right bottom"><img src="images/gdg_badge4.png" style="-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <q>
+        This is an example of quote text.
+      </q>
+      <div class="author">
+        Name<br>
+        Company
+      </div>
+    </article>
+  </slide>
+
+  <slide class="hidden">
+    <article>
+      <iframe data-src="http://www.google.com/doodle4google/resources/history.html"></iframe>
+    </article>
+  </slide>
+
+  <slide class="thank-you-slide segue nobackground">
+    <aside class="gdbar right"><img src="images/gdg_badge4.png" style="-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;"></aside>
+    <article class="flexbox vleft auto-fadein">
+o      <h2>&lt;Thank You!&gt;</h2>
+      <p>Special thanks to UNM, Startup Weekend and our GDG members John, Nick and Javier for helping with this event.</p>
+    </article>
+    <p class="auto-fadein" data-config-contact>
+      <!-- populated from slide_config.json -->
+    </p>
+  </slide>
+
+  <slide class="logoslide dark nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="images/google_developers_logo_white.png"></span>
+    </article>
+  </slide>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-XXXXXXXX-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>
