@@ -1,0 +1,11 @@
+String longitude = ""; // add coordinate here
+String latitude = ""; // add coordinate here
+String height = "150";
+String width = "400";
+// load the static Google Map in our WebView with a width of 400 by 150 height.
+webView.loadUrl("http://maps.google.com/maps/api/staticmap?center=" +
+	latitude + "," + longitude+ "&zoom=15&size=" + width + "x" + height +
+	"&scale=1&sensor=true&markers=color:blue%7Clabel:Y%7C" + 
+	latitude + "," + longitude + "");
+// If you created a key, you may use a &key=yourkey at the end
+// Color of marker is BLUE with a label of Y

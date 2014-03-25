@@ -1,0 +1,17 @@
+// In your MainActivity.java, add the following below your other private calls at the top
+private LatLng latLng; // right click LatLng to import
+private double latC = 0;
+private double lonC = 0;
+
+// In your MainActivity.java, add the following below your main class
+private void getLocationLatLng() {
+    try {
+	if(locationManager != null) {
+	latC = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER).getLatitude();
+	lonC = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER).getLongitude();
+	latLng = new LatLng(latC, lonC); // right click LatLng to import
+	}
+    } catch (Exception ex) {
+	System.out.println("Oops, we had an error: "+ ex.getMessage());
+    }
+}

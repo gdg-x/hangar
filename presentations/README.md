@@ -5,7 +5,7 @@ If you would like to share something here, make sure you want it to fall under t
 http://creativecommons.org/licenses/by-sa/3.0/
 
 ###Glider
-If your looking to create some HTML5 slides, take a look at [Project Glider](https://github.com/gdg-x/glider). It is a fork of the Google I/O slides, rebranded for GDGs
+If you're looking to create some HTML5 slides, take a look at [Project Glider](https://github.com/gdg-x/glider). It is a fork of the Google I/O slides, rebranded for GDGs
 
 
 ###Links
@@ -22,3 +22,4 @@ If your looking to create some HTML5 slides, take a look at [Project Glider](htt
 ######Dart
 
 ######Maps
+* [Google Maps (Android/Static) with Civic Data](http://gdgabq.com/june1/template.html) - **GDG Albuquerque** Dustin Brand
