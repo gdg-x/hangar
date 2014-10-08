@@ -1,0 +1,24 @@
+{
+  "name": "gdgtc-site-polymer",
+  "version": "0.0.0",
+  "homepage": "https://github.com/GDGTC/gdgtc-site-polymer",
+  "authors": [
+    "Lloyd Cledwyn <cledwyn@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components",
+    "test",
+    "tests"
+  ],
+   "dependencies": {
+    "polymer": "Polymer/polymer#~0.4.2",
+    "core-elements": "Polymer/core-elements#~0.4.2",
+    "paper-elements": "Polymer/paper-elements#~0.4.2",
+    "font-roboto": "Polymer/font-roboto#~0.4.2",
+    "core-icons": "Polymer/core-icons#~0.4.2"
+  }
+}
