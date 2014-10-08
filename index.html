@@ -19,14 +19,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <script src="components/platform/platform.js"></script>
     
     <link rel="shortcut icon" href="http://www.polymer-project.org/images/logos/p-logo-16.png">
+<!--     <link rel="import" href="components/sampler-scaffold/sampler-scaffold.html"> -->
+    <link rel="import" href="custom_components/scaffold.html">
 
     <link rel="import" href="components/core-icons/core-icons.html">
-    <link rel="import" href="components/sampler-scaffold/sampler-scaffold.html">
+
     <link rel="import" href="components/font-roboto/roboto.html">
     <link rel="import" href="components/core-item/core-item.html">
     <link rel="import" href="components/core-menu/core-submenu.html">
     <link rel="import" href="components/paper-icon-button/paper-icon-button.html">
     <link rel="import" href="components/paper-fab/paper-fab.html">
+
+
+
 
     <style>
 
@@ -53,14 +58,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <paper-icon-button class="menuButton" icon="menu" ></paper-icon-button>
       <paper-fab class="sourceButton bottom" icon="launch"></paper-fab>
     
+      <core-item label="Home" tag="paper-checkbox" url="custom_components/paper-checkbox-demo.html"></core-item>
       <core-item label="About" tag="paper-checkbox" url="custom_components/paper-checkbox-demo.html"></core-item>
-
-      <core-item label="Radio Button" tag="paper-radio-button" url="components/paper-radio-group/demo.html"></core-item>
-
-      <core-item label="Toggle Button" tag="paper-toggle-button" url="components/paper-toggle-button/demo.html"></core-item>
-      
-      <core-item label="Input" tag="paper-input" url="components/paper-input/demo.html"></core-item>
-      
+      <core-item label="Conduct" tag="paper-checkbox" url="custom_components/paper-checkbox-demo.html"></core-item>
+      <core-item label="Contact" tag="paper-checkbox" url="custom_components/paper-checkbox-demo.html"></core-item>      
+      <core-item label="Sponsor" tag="paper-checkbox" url="custom_components/paper-checkbox-demo.html"></core-item>      
       
     </sampler-scaffold>
   
