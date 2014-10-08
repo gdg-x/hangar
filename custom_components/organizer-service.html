@@ -1,0 +1,41 @@
+<link rel="import" href="../components/polymer/polymer.html">
+<link rel="import" href="../components/core-ajax/core-ajax.html">
+<!-- 
+ADAPTED FROM 
+  @homepage http://www.polymer-project.org/docs/start/tutorial.html
+
+  Consume local organizers.json
+-->
+
+<!--
+  
+  @attribute posts 
+  @type Array
+  @default []
+-->
+<polymer-element name="post-service" attributes="posts">
+  <template>
+    <style>
+    :host {
+      display: none;
+    }
+    </style>
+    <core-ajax id="ajax"
+      auto
+      url="../api/organizers.json"
+      on-core-response="{{postsLoaded}}"
+      handleAs="json">
+    </core-ajax>
+  </template>
+  <script>
+  Polymer('post-service', {
+    created: function() {
+      this.posts = [];
+    },
+    postsLoaded: function() {
+      // Make a copy of the loaded data
+      this.posts = this.$.ajax.response.slice(0);
+    }
+  });
+  </script>
+</polymer-element>

@@ -1,65 +1,54 @@
+<!--
+    @license
+    Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
+    This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+    The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+    The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+    Code distributed by Google as part of the polymer project is also
+    subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<!doctype html>
+<html>
+<head>
+  <title>sampler-scaffold</title>
 
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="The Best 404 Page Ever" />
-        <title>Cledwyn 404 - Time Not Found</title>
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-        <link rel="stylesheet" type="text/css" href="404.css" title="main" />
-    </head>
-    <body>
-        <object type="application/x-shockwave-flash" data="http://thebest404pageever.com/swf/com-pyuu-tah.swf" width="640" height="480" id="object_404">
-            <param name="allowScriptAccess" value="sameDomain" />
-            <param name="movie" value="http://thebest404pageever.com/swf/com-pyuu-tah.swf" />
-            <param name="menu" value="false" />
-            <param name="quality" value="high" />
-            <embed src="http://thebest404pageever.com/swf/com-pyuu-tah.swf" menu="false" quality="high" width="640" height="480" id="embed_404" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
-        </object>
-        <div id="content">
-            <h1><a href="http://thebest404pageever.com">404</a>*</h1>
-            <h2><a href="http://thebest404pageever.com/swf/com-pyuu-tah.swf">vid</a> | <a href="http://twitter.com/cledwyn">twitter</a> | <a href="http://cledwyn.com">cledwyn.com</a>  </h2> 
-            <h3><a href="http://thebest404pageever.com/swf/index.php">Kindly duped from thebest404pageever.com</a></h3>          
-            <h3>* Not reall.  Just nothing to see here</h3>          
-        </div>
-        <script type="text/javascript">
-        
-         var viewportwidth;
-         var viewportheight;
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
 
-         if (typeof window.innerWidth != 'undefined') {
-              viewportwidth = window.innerWidth,
-              viewportheight = window.innerHeight
-         }
-         else if (typeof document.documentElement != 'undefined' && typeof document.documentElement.clientWidth != 'undefined' && document.documentElement.clientWidth != 0) {
-               viewportwidth = document.documentElement.clientWidth,
-               viewportheight = document.documentElement.clientHeight
-         }
-         else {
-               viewportwidth = document.getElementsByTagName('body')[0].clientWidth,
-               viewportheight = document.getElementsByTagName('body')[0].clientHeight
-         }
-        var objwidth;
-        var objheight;
-        if (viewportwidth >= 1680 && viewportheight >= 888) {
-            objwidth = (768/1680)*viewportwidth;
-            objheight = (576/888)*viewportheight;
-        } else {
-            objwidth = 640;
-            objheight = 480;
-        }
+  <script src="../platform/platform.js"></script>
+  
+  <link rel="import" href="components/core-icons/core-icons.html">
+  <link rel="import" href="components/sampler-scaffold/sampler-scaffold.html">
+  <link rel="import" href="components/core-item/core-item.html">
 
-        var swf1 = document.getElementById('object_404');
-        var swf2 = document.getElementById('embed_404');
-        swf1.style.width = objwidth  + 'px';
-        swf1.style.height = objheight  + 'px';
-        swf2.style.width = objwidth + 'px';
-        swf2.style.height = objheight + 'px';
-        
-        </script>
-            <!-- defeating a sandwich only makes it tastier -->
-            <!-- are you seriously still reading these comments holy shit get out of here god -->
-            <!-- yeah YOU YES YOU -->
-            <!-- hi meowingtons -->
-    </body>
+  <style>
+
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial;
+      margin: 0;
+    }
+    
+    section {
+      padding: 40px;
+      min-height: 300px;
+    }
+
+  </style>
+
+</head>
+
+<body unresolved>
+
+  <sampler-scaffold label="HTML Input Elements">
+
+    <core-item label="String" url="components/sampler-scaffold/demos/string.html"></core-item>
+    <core-item label="Checkbox" url="components/sampler-scaffold/demos/checkbox.html"></core-item>
+    <core-item label="Radio" url="components/sampler-scaffold/demos/radio.html"></core-item>
+    <core-item label="Range" url="components/sampler-scaffold/demos/range.html"></core-item>
+    <core-item label="Color" url="components/sampler-scaffold/demos/color.html"></core-item>
+    
+  </sampler-scaffold>
+
+</body>
 </html>
