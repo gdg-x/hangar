@@ -3,6 +3,7 @@
     "uid": 1,
     "text" : "Web Application Developer at Macalester College",
     "username" : "Lloyd Cledwyn",
+    "gplusid":"LloydCledwyn",
     "avatar" : "https://lh3.googleusercontent.com/-pRtbphj2rLk/AAAAAAAAAAI/AAAAAAAA0Bc/vetOzV64wwg/s120-c/photo.jpg",
     "favorite": false
   },
@@ -10,6 +11,7 @@
     "uid": 2,
     "text" : "Chief Solutions Officer at MentorMate",
     "username" : "Stephen Fluin",
+    "gplusid":"StephenFluin",
     "avatar" : "https://lh4.googleusercontent.com/-JZSee_uuOJE/AAAAAAAAAAI/AAAAAAAA7qs/eP3LP_qLikk/s120-c/photo.jpg",
     "favorite": false
   },
@@ -17,6 +19,7 @@
     "uid": 3,
     "text" : "Google Apps Administrator at University of Minnesota",
     "username" : "Jeff Williams",
+    "gplusid":"CookieMonster",
     "avatar" : "https://lh4.googleusercontent.com/-h6uwuDOCDEM/AAAAAAAAAAI/AAAAAAAAADw/ll6e6hR29RU/s120-c/photo.jpg",
     "favorite": false
   },
@@ -24,6 +27,7 @@
     "uid": 4,
     "text" : "Android Team Lead at The nerdery",
     "username" : "Patrick Fuentes",
+    "gplusid":"PatrickFuentes",
     "avatar" : "https://lh3.googleusercontent.com/-MWrr1zCpEz8/UhzE4PlkrPI/AAAAAAAAA0Y/Ip_8AKA6lP4/w401-h400-no/vx.png",
     "favorite": false
   }
