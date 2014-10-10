@@ -1,0 +1,81 @@
+
+<!doctype html>
+<!--
+Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE
+The complete set of authors may be found at http://polymer.github.io/AUTHORS
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS
+-->
+<html>
+  <head>
+    <title>GDG Twin Cities</title>
+
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <script src="components/platform/platform.js"></script>
+    
+    <link rel="shortcut icon" href="http://www.polymer-project.org/images/logos/p-logo-16.png">
+<!--     <link rel="import" href="components/sampler-scaffold/sampler-scaffold.html"> -->
+    <link rel="import" href="custom_components/scaffold.html">
+
+    <link rel="import" href="components/core-icons/core-icons.html">
+
+    <link rel="import" href="components/font-roboto/roboto.html">
+    <link rel="import" href="components/core-item/core-item.html">
+    <link rel="import" href="components/core-menu/core-submenu.html">
+    <link rel="import" href="components/paper-icon-button/paper-icon-button.html">
+    <link rel="import" href="components/paper-fab/paper-fab.html">
+
+
+
+
+    <style>
+
+      body {
+        font-family: RobotoDraft, sans-serif;
+        color: #333;
+        margin: 0;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        -webkit-touch-callout: none;
+      }
+      
+    </style>
+
+  </head>
+
+  <body unresolved>
+
+    <sampler-scaffold label="GDG Twin Cities" fit>
+
+      <paper-icon-button class="menuButton" icon="menu" ></paper-icon-button>
+      <paper-fab class="sourceButton bottom" icon="launch"></paper-fab>
+    
+      <core-item label="Home" tag="home" url="home.html"></core-item>
+      <core-item label="About" tag="about" url="about.html"></core-item>
+      <core-item label="Conduct" tag="conduct" url="conduct.html"></core-item>
+      <core-item label="Contact" tag="contact" url="contact.html"></core-item>      
+      <core-item label="Sponsor" tag="sponsor" url="sponsor.html"></core-item>      
+      
+    </sampler-scaffold>
+  
+  <script>
+    // Analytics for pp.org
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-BBUSTED-1', 'auto');
+    ga('send', 'pageview');
+  </script>  
+  </body>
+
+</html>
