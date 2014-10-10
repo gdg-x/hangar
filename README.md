@@ -16,7 +16,8 @@ This is a modification of the [Polymer Paper Elements Demo](https://www.polymer-
 
 
 ##TODO
-- [ ] Links to external sites will not load
+- [X] Links to external sites will not load
+- [ ] Add some GDG sugar to layout.  Like the [GDG Chevron logo](http://goo.gl/YMHuCe)
 - [ ] Add **Past Speakers** page, with links to resources and dedescription
   - [ ] Create past-speaker.html custom element
   - [ ] Create past-speaker.json data format to add to **api** directory
