@@ -1,0 +1,57 @@
+<link rel="import" href="components/polymer/polymer.html">
+<link rel="import" href="components/core-icon-button/core-icon-button.html">
+<polymer-element name="page-footer">
+  <template>
+    <style>
+        :host {
+          display: block;
+          position: relative;
+          background-color: white;
+          padding: 20px;
+          width: 100%;
+          font-size: 1.2rem;
+          font-weight: 300;
+        }
+        core-icon-button {
+          position: absolute;
+          top: 3px;
+          right: 3px;
+          color: #636363;
+        }
+        .container{
+          margin: 20px;
+          font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+        }
+        .partner{
+          margin-left: 40px;
+        }
+    </style>
+
+    <div class="container">
+    <hr>
+      <div layout horizontal center>
+            <div layout center justified>
+              <h3 class="partners-text">Partner Organizations</h3>
+            </div>
+    
+            <div class="partner">
+              <a href="http://developers.google.com/"><img class="featurette-image img-responsive" src="images/partners/google.png" alt="Google"></a>
+            </div>
+
+            <div class="partner">
+              <a href="http://code42.com"><img class="featurette-image img-responsive" src="images/partners/code42.svg" ></a>
+            </div>
+
+            <div class="partner">
+              <a href="http://agosto.com"><img class="featurette-image img-responsive" src="images/partners/Agosto_Logo_Large-60h.png" ></a>
+            </div>
+      </div>    
+    <content></content>
+    </div>
+
+  </template>
+  <script>   
+  Polymer({
+  });
+  </script>
+</polymer-element>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+  <title>GDG Twin Cities Home</title>
+  
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  
+  <script src="components/platform/platform.js"></script>
+  
+  <link rel="import" href="components/paper-checkbox/paper-checkbox.html">
+  <link rel="import" href="components/font-roboto/roboto.html">
+  <link rel="import" href="custom_components/organizer-list.html">
+  <link rel="import" href="custom_components/organizer-card.html">
+  <link rel="import" href="footer.html">
+  
+  <style shim-shadowdom>
+    body {
+      font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+      margin: 0;
+      padding: 24px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+      -webkit-touch-callout: none;
+  }
+  core-header-panel {
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch; 
+  }
+  core-toolbar {
+    background: #03a9f4;
+    color: white;
+  }
+ organizer-card {
+      margin: 30px;
+      width: 290px;
+  }
+  
+    
+  </style>
+  
+</head>
+<body unresolved>
+
+
+  <h1>GDG Twin Cities</h1>
+  <p>Our big event that is coming on Feb 28th, is the Google Developers Group DevFest.  We'd love to see you there.  Find out more are <a href="http://devfest.mn">devfest.mn</a></p>
+  <p>Our events are managed on Meetup.com <a class="btn btn-primary btn-large" href="http://meetup.com/gdg-tc">sign up!</a></p>
+
+<div class="container" horizontal layout wrap>
+  <h2 class="">Organizers</h2>
+  <organizer-list show="all"></organizer-list>
+  
+</div>
+  
+
+
+  <hr class="featurette-divider">
+
+    <div class="row">
+    <h2 class="">Organizer Emeritus</h2>
+
+       <organizer-card gplusid="BradArmstrong">
+          <img src="http://lh3.googleusercontent.com/-dzLyvnE1l2w/AAAAAAAAAAI/AAAAAAAABrU/8HYjk5TJjHM/s120-c/photo.jpg" width="70" height="70" />
+          <h2>Brad Armstrong</h2>
+          <p>Android Team manager at Code42</p>
+        </organizer-card>
+
+   </div>
+    
+
+  </div>
+    
+            
+
+  <page-footer></page-footer>        
+  
+</body>
+</html>
